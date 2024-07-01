@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("input").focus(function(){
+        $(this).css("background-color","yellow");
+    });
+    $("input").blur(function(){
+        $(this).css("background-color","green");
+    });
+    // $("#p1").hover(function(){
+    //     alert("You entered p1");
+    // },
+    // function(){
+    //     alert("You left p1")
+    // });
+  $("button").dblclick(function(){
+    $("p").hide();
+  });
+  $("p").on({
+    mouseenter,function(){
+    $(this).css("color","red");
+    },
+    mouseleave,function(){
+      $(this).css("background-color",yellow)
+    }
+  })
+});
+</script>
+</head>
+<body>
+
+<p id="p1">If you double-click on me, I will disappear.</p>
+<p class="para">Click me away!</p>
+<p>Click me too!</p>
+<button>Click me</button>
+<br><br>
+
+Name: <input type="text" name="fullname"><br><br>
+Email: <input type="text" name="email">
+
+</body>
+</html>

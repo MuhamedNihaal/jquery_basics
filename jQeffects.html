@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("#hide").click(function(){
+    $("p.para1").hide(100,function(){
+        alert("The paragraph is now hidden") //this is the call-back function
+    });
+  });
+  $(".show").click(function(){
+    $("p.para1").show(100);
+  });
+  $(".para").click(function(){
+    $("p.p1").toggle(100);
+    $("p.p1").css("color","red");
+  });
+  $("#chain").click(function(){
+    $(".me").css("color","red").slideUp(2000).slideDown(2000); //this is the chaining function
+  })
+});
+</script>
+</head>
+<body>
+
+<p class="para1">If you click on the "Hide" button, I will disappear.</p>
+
+<button id="hide">Hide</button>
+<button class="show">Show</button><br>
+<br>
+<p class="p1">This is used for toggle</p>
+<button class="para">Toggle</button>
+<br><br>
+<p class="me">jQuery is fun</p>
+<button id="chain">Click me</button>
+</body>
+</html>

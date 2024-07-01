@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("#btn1").click(function(){
+        $("div").first().css("background-color", "yellow");
+        $("div").last().css("background-color", "red");
+        $("div").eq(1).css("background-color", "green");
+        $("p").filter(".para").css("color","blue");
+        $("p").not(".para").css("color","purple");
+    })
+});
+</script>
+</head>
+<body>
+
+<h1>Welcome to My Homepage</h1>
+
+<p class="para">This is a paragraph.</p>
+<p class="para">This is also a paragraph</p>
+
+<div style="border: 1px solid black;">
+  <p>A paragraph in a div.</p>
+  <p>Another paragraph in a div.</p>
+</div>
+<br>
+
+<div style="border: 1px solid black;">
+  <p>A paragraph in another div.</p>
+  <p>Another paragraph in another div.</p>
+</div>
+<br>
+
+<div style="border: 1px solid black;">
+  <p>A paragraph in another div.</p>
+  <p>Another paragraph in another div.</p>
+</div><br>
+<button id="btn1">Click Me</button>
+</body>
+</html>

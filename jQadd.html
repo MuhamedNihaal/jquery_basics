@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("#btn1").click(function(){
+    $("p.append").append(" <b>Appended text</b>.");
+  });
+
+  $("#btn2").click(function(){
+    $("ol.append").append("<li>Appended item</li>");
+  });
+    $("#btn3").click(function(){
+        $("p.prepend").prepend("<b>Prepended Text</b>. "); 
+    });
+    $("#btn4").click(function(){
+        $("ol.prepend").prepend("<li>Prepended Item</li>");
+    });
+    $("#btn5").click(function(){
+        $("img").before("<b>Before</b> ");
+    });
+    $("#btn6").click(function(){
+        $("img").after(" <i>After</i>");
+    });
+});
+</script>
+</head>
+<body>
+
+<p class="append">This is a paragraph.</p>
+<p class="append">This is another paragraph.</p>
+
+<ol class="append">
+  <li>List item 1</li>
+  <li>List item 2</li>
+  <li>List item 3</li>
+</ol>
+
+<button id="btn1">Append Text</button>
+<button id="btn2">Append List Items</button>
+<br><br>
+<p class="prepend">This is a paragraph.</p>
+<p class="prepend">This is another paragraph.</p>
+
+<ol class="prepend">
+  <li>List item 1</li>
+  <li>List item 2</li>
+  <li>List item 3</li>
+</ol>
+<br>
+<button id="btn3">Prepend Text</button>
+<button id="btn4">Prepend List Items</button>
+<br><br>
+
+<img src="car.jpg" width="200" height="140">
+<br><br>
+<button id="btn5">Insert Before</button>
+<button id="btn6">Insert After</button>
+</body>
+</html>
